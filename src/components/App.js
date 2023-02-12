@@ -9,7 +9,9 @@ export default function App(props){
     return (
         
         <div>
-            <Navbar /><Main /><Footer />
+            <Navbar />
+            <Main />
+            <Footer />
             </div>
     )
 }

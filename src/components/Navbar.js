@@ -7,10 +7,10 @@ export default function Navbar(props) {
             <img src={props.logo} alt="logo"/>
             <h3>{props.title}</h3>
             <ul>
-                <li>About</li>
-                <li>Categories</li>
-                <li>My courses</li>
-                <li>Contact</li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">My courses</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     )
