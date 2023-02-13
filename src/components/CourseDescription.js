@@ -1,6 +1,5 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import '../styles/main.css';
 
 
 export default function CourseDescription(props){
