@@ -1,0 +1,33 @@
+.course--card {
+    width: 175px;
+    font-size: 12px;
+    flex: 0 0 auto;         /* ADD */
+    display: flex;          /* ADD */
+    flex-direction: column; /* ADD */
+}
+
+.course--card--image {
+    width: 100%;
+    border-radius: 9px;
+    margin-bottom: 9px;
+}
+
+/* ADD */
+.course--card--title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.course--card--stats {
+    display: flex;
+    align-items: center;
+}
+
+.course--card--star {
+    height: 14px;
+}
+
+/* ADD */
+.course--card--price {
+    margin-top: auto;
+}

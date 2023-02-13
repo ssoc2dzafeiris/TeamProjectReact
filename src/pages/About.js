@@ -1,8 +1,10 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom'
+ 
 export default function About(){
     return (
         <div>
+            <Link to='/' className='btn'>Back to Home</Link>
             <h1>About us</h1>
             <section>
             <h3>Description project
@@ -21,5 +23,4 @@ export default function About(){
             </p>
             </section>  
         </div>
-    )
-}
+        )}

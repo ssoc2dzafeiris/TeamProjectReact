@@ -1,8 +1,9 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom'
 export default function Categories(props){
     return(
         <div>
+            <Link to='/' className='btn'>Back to Home</Link>
             <h1>Categories</h1>
             <div className="categories--row">
             <div className="category--item">
