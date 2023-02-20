@@ -1,7 +1,7 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import Content from './components/content'
-import PageFooter from './components/footer'
+import React from 'react';
+import Navbar from './components/Navbar';
+import Content from './components/content';
+import PageFooter from './components/Footer';
 
 
 export default function App() {
