@@ -85,6 +85,34 @@
       "duration": "1 month",
       "online": false,
       "description": "Το σεμινάριο απευθύνεται σε συμμετέχοντες που επιθυμούν να μάθουν πώς να επεξεργάζονται εικόνες και να δημιουργούν τα δικά τους γραφικά με εύκολο τρόπο. εικόνας. Χρησιμοποιώντας την online πλατφόρμα σχεδιασμού Canva θα φτιάξουμε εύκολα και γρήγορα δελεαστικά δημιουργικά. Αν θέλεις να ανεβάζεις ελκυστικές αναρτήσεις στο διαδίκτυο, αυτό το σεμινάριο είναι φτιαγμένο για σένα!"
+    },
+    {
+      "id": "100",
+      "title": 67,
+      "duration": 90,
+      "imagePath": "https://dummyimage.com/250/ffffff/000000",
+      "online": "true",
+      "description": 21,
+      "price": {
+        "early_bird": 500,
+        "normal": 300
+      },
+      "dates": {
+        "start_date": "2023-02-10",
+        "end_date": "2023-03-10"
+      }
+    },
+    {
+      "title": "adasdsadas",
+      "duration": "bbbbbbbbbbbbbbb",
+      "imagePath": "ddddddddddddddd",
+      "online": "",
+      "description": "ccccccccccccccccccccccccc",
+      "start_date": "",
+      "end_date": "",
+      "early_bird": "",
+      "normal": "",
+      "id": "70"
     }
   ]
 }

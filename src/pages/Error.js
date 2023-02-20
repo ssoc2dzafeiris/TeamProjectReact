@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Error = () => {
   return (
-    <section className='section'>
+    <section className='section container'>
       <h2>404</h2>
       <p>page not found</p>
       <Link to='/'>Back to the homepage</Link>
