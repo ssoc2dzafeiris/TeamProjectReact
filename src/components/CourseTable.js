@@ -17,7 +17,7 @@ console.log("Courses",courses);
     return(
 
         <div>
-             <table className="shadow-2xl font-[Poppins] border-2 border-indigo-200 overflow-hidden rounded-xl mb-5">
+             <table className="shadow-2xl font-[Poppins] border-indigo-200 overflow-hidden rounded-xl mb-5">
                 
                             <thead className="text-white">
                                 <tr>
