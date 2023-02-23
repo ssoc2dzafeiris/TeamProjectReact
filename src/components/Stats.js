@@ -15,10 +15,10 @@ export default function Stats({title}){
 
     return (
         <>
-         <div className="flex flex-col py-2 mt-4 mx-auto border-gray-200">
-                <h3 className="text-3xl font-semibold text-indigo-200 py-2 mx-4 border-b-2">{title}</h3>
+         <div className="flex flex-col py-2 mt-4 px-1 mx-auto">
+                <h3 className="text-3xl font-semibold text-indigo-100 py-2 px-5 mx-auto border-b-2 border-gray-100">{title}</h3>
         </div>
-        <div className="grid gap-3 md:grid-cols-4 justify-items-center shadow-md bg-white py-4 rounded-md">
+        <div className="grid gap-3 md:grid-cols-4 justify-items-center shadow-md bg-white py-4 rounded-md mb-5 mt-2">
             {stats.length && 
             stats.map(({id,title,amount}) =>
             (

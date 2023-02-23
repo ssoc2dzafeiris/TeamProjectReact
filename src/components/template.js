@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Dashboard from "./Dashboard"
-import Cards from "./Cards"
+import Cards from "./cards"
 import Addnewcourse from "./Addnewcourse"
 import Navbar from "./Navbar"
 import PageFooter from "./Footer"
