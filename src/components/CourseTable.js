@@ -10,14 +10,14 @@ useEffect(()=>{
     fetch(url)
     .then((response)=> response.json())
     .then((data)=> {
-        const lastCourses = data.slice(-3);
+        const lastCourses = data.slice(-4);
         setCourses(lastCourses);});
 },[])
 console.log("Courses",courses);
     return(
 
         <div>
-             <table className="shadow-2xl font-[Poppins] border-indigo-200 overflow-hidden rounded-xl mb-5">
+             <table className="shadow-2xl font-[Poppins] border-2 border-indigo-200 overflow-hidden rounded-xl mt-2 mb-5 mx-auto">
                 
                             <thead className="text-white">
                                 <tr>
@@ -44,7 +44,7 @@ console.log("Courses",courses);
                             </thead>
                             <tbody className="text-indigo-900 text-center">
                                 {courses.length && courses.map((item) =>{
-                                     return (<CourseItem key={item.id} title={item.title} duration={item.duration} start_date ={item.dates.start_date} end_date={item.dates.end_date}/>)
+                                     return (<CourseItem key={item.id} title={item.title} duration={item.duration} start_date ={item.dates.start_date} end_date={item.dates.end_date} online={item.online}/>)
                                 }
         
                                 )}                                                           
