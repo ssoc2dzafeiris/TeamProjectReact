@@ -10,8 +10,8 @@ useEffect(()=>{
     fetch(url)
     .then((response)=> response.json())
     .then((data)=> {
-        
-        setCourses(data);});
+        const lastCourses = data.slice(-3);
+        setCourses(lastCourses);});
 },[])
 console.log("Courses",courses);
     return(
