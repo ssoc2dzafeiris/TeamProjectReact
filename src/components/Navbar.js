@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGraduationCap, faBars } from '@fortawesome/free-solid-svg-icons'
 import SearchBar from './searchbar'
@@ -14,10 +15,8 @@ const Navbar = () => {
   return (
     <div className='shadow-md w-full sticky top-0 left-0'>
         <div className='md:flex items-center justify-between bg-white py-4 md:px-10 px-7'>
-            <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] text-gray800'>
-                <FontAwesomeIcon className='text-4xl text-indigo-600 mr-2 pt-0' icon={faGraduationCap} />
-                Courses Project
-            </div>
+        <Link to='/' className="font-bold text-2xl cursor-pointer flex items-center font-[Poppins] text-gray800"><FontAwesomeIcon className='text-4xl text-indigo-600 mr-2 pt-0' icon={faGraduationCap} />
+                Courses Project</Link>
             <div onClick={()=>setOpen(!open)} className='text-3xl absolute right-8 top-4 cursor-pointer md:hidden'>
             <FontAwesomeIcon icon={faBars} />
             </div>
