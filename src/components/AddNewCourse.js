@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom'
 
-const Addnewcourse = () => {
+const AddNewCourse = () => {
+    <div className="row">
+    <Link to='/' className='text-black-50 p-2 col-md-5'>Go Back</Link>
+</div>
 
     const [title, setTitle] = useState('');
     const [duration, setDuration] = useState('');
@@ -133,4 +137,4 @@ const Addnewcourse = () => {
     )
 }
 
-export default Addnewcourse
+export default AddNewCourse

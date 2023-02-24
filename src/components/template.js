@@ -1,24 +1,30 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Dashboard from "./Dashboard"
 import Cards from "./cards"
-import Addnewcourse from "./Addnewcourse"
-import Navbar from "./Navbar"
+import AddNewCourse from "./AddNewCourse"
+import About from './About'
 import PageFooter from "./Footer"
+import Error from "./ErrorPage";
+import SharedLayout from "./SharedLayout"
+import Navbar from "./Navbar"
 
-const Template = () => {
+const App = () => {
   return (
-    <div className='flex flex-col min-h-screen bg-indigo-600'>
-    <Navbar />
-    <BrowserRouter>
-    <Routes>
-        <Route index path='/' element={<Dashboard />} />
-        <Route path='/courses' element={<Cards />} />
-        <Route path='/addcourse' element={<Addnewcourse />} />
-    </Routes>
-    </BrowserRouter>
-    <PageFooter />
-    </div>
+  <>
+      <BrowserRouter>
+        <Routes>
+           <Route path='/' element = {<SharedLayout />}>
+             <Route index path='/' element={<Dashboard />} />
+             <Route path='/courses' element={<Cards />} />
+              <Route path='/addcourse' element={<AddNewCourse />} />
+              <Route path='/about' element={<About />} />
+              <Route path='*' element={<Error />} />
+            </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
+
   )
 }
 
-export default Template
+export default App

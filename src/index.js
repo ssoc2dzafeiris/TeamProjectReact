@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Template from "./components/template";
+import App from "./components/template";
 import './styles/index.css'
 
 
@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 // With Strict Mode in React 18, React will simulate unmounting and remounting the component in development mode
 root.render( 
   <React.StrictMode>
-  <Template />
+  <App />
   </React.StrictMode>
  
 );
