@@ -8,7 +8,6 @@ export default function SharedLayout(){
     return(
         <>
          <div className='flex flex-col min-h-screen bg-indigo-600'>
-    
             <Navbar />
             <Outlet />
             <PageFooter />  

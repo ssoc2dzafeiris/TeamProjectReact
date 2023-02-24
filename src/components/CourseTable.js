@@ -42,7 +42,7 @@ console.log("Courses",courses);
                                         Actions</th>
                                 </tr>
                             </thead>
-                            <tbody className="text-indigo-900 text-center">
+                            <tbody className="text-indigo-800 text-center">
                                 {courses.length && courses.map((item) =>{
                                      return (<CourseItem key={item.id} title={item.title} duration={item.duration} start_date ={item.dates.start_date} end_date={item.dates.end_date} online={item.online}/>)
                                 }

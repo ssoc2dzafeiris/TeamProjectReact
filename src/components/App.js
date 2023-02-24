@@ -3,10 +3,8 @@ import Dashboard from "./Dashboard"
 import Cards from "./cards"
 import AddNewCourse from "./AddNewCourse"
 import About from './About'
-import PageFooter from "./Footer"
 import Error from "./ErrorPage";
 import SharedLayout from "./SharedLayout"
-import Navbar from "./Navbar"
 
 const App = () => {
   return (

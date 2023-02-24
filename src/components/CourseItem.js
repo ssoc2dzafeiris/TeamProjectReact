@@ -16,7 +16,7 @@ export default function CourseItem({
         <td className="px-6 py-3 font-semibold ">{title}</td>
         <td className="px-6 py-3 font-semibold ">{duration}</td>
         <td className="px-6 py-3 font-semibold ">{start_date}</td>
-        <td className="px-6 py-3 ">{end_date}</td>
+        <td className="px-6 py-3 font-semibold">{end_date}</td>
         <td className="px-6 py-3">
           {!online ? (
              <span className="text-red-500">
