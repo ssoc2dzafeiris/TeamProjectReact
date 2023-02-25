@@ -13,14 +13,20 @@ const PageFooter = () => {
 
   return (
     <footer className='text-center fixed w-full bottom-0 left-0 right-0 bg-white text-gray-800 text-xl py-2 px-7 flex items-center flex-row justify-center'>
-    TEAM PROJECT BY: 
+    <h3 className='text-gray-400'>TEAM PROJECT BY:</h3> 
+    <ul className="flex flex-row">
     {teamMembers.map((member => 
         (
-        <span className='pl-4' key={member.name}><a href={member.github} className='text-gray-800 hover:text-indigo-600 hover:border-indigo-600 hover:border-b-2 duration-100'>
-        <FontAwesomeIcon icon={faCode} /> {member.name}</a></span>
+          <li className="flex flex-col">
+            <span className='pl-4' key={member.name}>
+              <a href={member.github} title={member.name} className='text-gray-400 hover:text-blue-900 hover:border-indigo-800 hover:border-b-2 duration-100 '>
+          <FontAwesomeIcon icon={faCode} /> {member.name}</a>
+          </span>
+          </li>
         )
     ))
     }
+     </ul>
      </footer>
   )
 }

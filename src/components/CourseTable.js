@@ -15,16 +15,13 @@ useEffect(()=>{
 },[])
 console.log("Courses",courses);
     return(
-
-        <div>
+        <>
              <table className="shadow-2xl font-[Poppins] border-2 border-indigo-200 overflow-hidden rounded-xl mt-2 mb-5 mx-auto">
-                
                             <thead className="text-white">
                                 <tr>
                                     <th
                                         className="px-6 py-3 bg-indigo-800">
                                         Title</th>
-                                   
                                     <th
                                         className="px-6 py-3 bg-indigo-800">
                                         Duration</th>
@@ -50,7 +47,7 @@ console.log("Courses",courses);
                                 )}                                                           
                             </tbody>
                         </table>
-        </div>
+        </>
 
     )
 }

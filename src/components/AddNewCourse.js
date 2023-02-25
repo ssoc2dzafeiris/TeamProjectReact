@@ -42,6 +42,7 @@ const AddNewCourse = () => {
 
     }
     return (
+        <>
         <div className="w-5/6 mt-5 mx-auto flex justify-center items-center h-screens">
             <form onSubmit={handleSubmit} className=" max-h-90vh w-5/6 bg-white p-8 rounded-lg shadow-md overflow-y-auto ">
                 <h1 className="font-extrabold font-weight: 900 text-5xl mb-8  ">Add Course</h1>
@@ -133,7 +134,7 @@ const AddNewCourse = () => {
 
 
         </div >
-
+        </>
     )
 }
 

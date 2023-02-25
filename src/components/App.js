@@ -5,6 +5,7 @@ import AddNewCourse from "./AddNewCourse"
 import About from './About'
 import Error from "./ErrorPage";
 import SharedLayout from "./SharedLayout"
+import CoursePractisePage from './CoursePractisePage';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
              <Route path='/courses' element={<Cards />} />
               <Route path='/addcourse' element={<AddNewCourse />} />
               <Route path='/about' element={<About />} />
+              <Route path='/courses/:id' element={<CoursePractisePage />} />
               <Route path='*' element={<Error />} />
             </Route>
         </Routes>

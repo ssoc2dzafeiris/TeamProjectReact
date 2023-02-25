@@ -29,7 +29,7 @@ export default function CourseItem({
           )}
         </td>
         <td className="px-6 py-3">
-          <ViewCourseLink title={"Details"}/>
+          <ViewCourseLink title={"Details"} path={"/courses/"}/>
         </td>
       </tr>
     </>
