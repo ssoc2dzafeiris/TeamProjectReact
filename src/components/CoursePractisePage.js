@@ -9,7 +9,7 @@ export default function CoursePractisePage(){
     });
 
     useEffect(()=>{
-        fetch(`"http://localhost:3001/courses/1"`)
+        fetch(`"http://localhost:3001/courses/"+${urlParams.id}`)
         .then((res)=> res.json())
         .then((data) =>{
             setCourse(data);
