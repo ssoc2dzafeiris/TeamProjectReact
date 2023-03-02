@@ -43,27 +43,27 @@ export default function CoursePractisePage(){
                     <ul className="list-none flex flex-wrap grid grid-cols-2 mb-1">
                         <li className="py-2 flex flex-col">
                         <div className="flex items-center">
-                            <div><span className="text-normal font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-100 bg-indigo-600 mr-3"><i class="fa-solid fa-calendar-minus"></i></span></div>
+                            <div><span className="text-normal font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-100 bg-indigo-600 mr-3"><i className="fa-solid fa-calendar-minus"></i></span></div>
                     <div><h4 className="text-slate-600 hover:text-indigo-500 font-semibold hover:underline text-normal">Start Date:<span>{course.dates.start_date}</span></h4></div></div></li>
                     <li className="py-2 flex flex-col">
                         <div className="flex items-center">
-                            <div><span className="text-normal font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-100 bg-indigo-600 mr-3"><i class="fa-solid fa-calendar-plus"></i></span></div>
+                            <div><span className="text-normal font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-100 bg-indigo-600 mr-3"><i className="fa-solid fa-calendar-plus"></i></span></div>
                     <div><h4 className="text-slate-600 hover:text-indigo-500 font-semibold hover:underline text-normal">End Date:<span>{course.dates.end_date}</span></h4></div></div></li>
                     <li className="py-2 flex flex-col">
                         <div className="flex items-center">
-                            <div><span className="text-normal font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-100 bg-indigo-600 mr-3"><i class="fa-solid fa-clock"></i></span></div>
+                            <div><span className="text-normal font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-100 bg-indigo-600 mr-3"><i className="fa-solid fa-clock"></i></span></div>
                     <div><h4 className="text-slate-600 hover:text-indigo-500 font-semibold hover:underline text-normal">Duration:<span>{course.duration}</span></h4></div></div></li>
                     <li className="py-2 flex flex-col">
                         <div className="flex items-center">
-                            <div><span className="text-normal font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-100 bg-indigo-600 mr-3"><i class="fa-solid fa-globe"></i></span></div>
+                            <div><span className="text-normal font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-100 bg-indigo-600 mr-3"><i className="fa-solid fa-globe"></i></span></div>
                     <div><h4 className="text-slate-600 hover:text-indigo-500 font-semibold hover:underline text-normal">Online:<span>{course.online ? "Yes" : " No"}</span></h4></div></div></li>
                     <li className="py-2 flex flex-col">
                         <div className="flex items-center">
-                            <div><span className="text-normal font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-100 bg-indigo-600 mr-3"><i class="fa-solid fa-coins"></i></span></div>
+                            <div><span className="text-normal font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-100 bg-indigo-600 mr-3"><i className="fa-solid fa-coins"></i></span></div>
                     <div><h4 className="text-slate-600 hover:text-indigo-500 font-semibold hover:underline text-normal">Normal Price:<span>{course.price.normal}</span></h4></div></div></li>
                     <li className="py-2 flex flex-col">
                         <div className="flex items-center">
-                            <div><span className="text-normal font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-100 bg-indigo-600 mr-3"><i class="fa-solid fa-gift"></i></span></div>
+                            <div><span className="text-normal font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-100 bg-indigo-600 mr-3"><i className="fa-solid fa-gift"></i></span></div>
                     <div><h4 className="text-slate-600 hover:text-indigo-500 font-semibold hover:underline text-normal">Early-bird Price:<span>{course.price.early_bird}</span></h4></div></div></li>
                     </ul>
                     </div>
