@@ -13,7 +13,7 @@ useEffect(()=>{
         const lastCourses = data.slice(-4);
         setCourses(lastCourses);});
 },[])
-console.log("Courses",courses);
+
     return(
         <>
              <table className="shadow-2xl font-[Poppins] border-2 border-indigo-200 overflow-hidden rounded-xl mt-2 mb-5 mx-auto">

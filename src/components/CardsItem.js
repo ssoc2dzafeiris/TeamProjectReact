@@ -1,11 +1,12 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoins, faCalendar, faCalendarCheck } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
-const CardsItem = ({title, imagePath, dates, price, duration, online}) => {
+const CardsItem = ({id, title, imagePath, dates, price, duration, online}) => {
   return (
         <div className='h-96 w-96 border-2 border-gray-400 bg-white border-opacity-60 rounded-lg overflow-hidden m-4  hover:scale-110 hover:shadow-2xl hover:border-white transition duration-200 ease-linear'>
-            <a href='#'>
+            <Link to={`/courses/${id}`}>
             <img src={`images${imagePath}`} alt={title} className='w-fit object-cover object-center' />
             <div className='p-2'>
                 <h1 className='text-xl font-semibold mb-3'>{title}</h1>
@@ -24,7 +25,7 @@ const CardsItem = ({title, imagePath, dates, price, duration, online}) => {
                     <div className='font-bold'>{online ? 'Online' : 'Δια ζώσης'}</div>
                     </div>
             </div>
-            </a>
+            </Link>
         </div>
   )
 }

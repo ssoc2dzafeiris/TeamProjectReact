@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGraduationCap, faBars } from '@fortawesome/free-solid-svg-icons'
-import SearchBar from './searchbar'
 
 const Navbar = () => {
   let Links = [
@@ -26,7 +25,6 @@ const Navbar = () => {
                   <Link key={link.name} to={link.link} className='text-gray-800 hover:text-gray-400 duration-500'>{link.name}</Link>
                 </li>
               ))}
-              <li className='md:ml-8 text-xl md:my-0 my-7'><SearchBar /></li>
             </ul>
         </div>
     </div>
