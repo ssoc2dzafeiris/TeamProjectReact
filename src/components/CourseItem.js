@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faXmark } from "@fortawesome/free-solid-svg-icons";
 import ViewCourseLink from "./ViewCourseLink";
 
-export default function CourseItem({
+export default function CourseItem({id,
   title,
   duration,
   start_date,
@@ -12,7 +12,7 @@ export default function CourseItem({
 }) {
   return (
     <>
-      <tr className="bg-indigo-200 hover:bg-white hover:scale-100 cursor-pointer duration-100 p-5">
+      <tr key={id} className="bg-indigo-200 hover:bg-white hover:scale-100 cursor-pointer duration-100 p-5">
         <td className="px-6 py-3 font-semibold ">{title}</td>
         <td className="px-6 py-3 font-semibold ">{duration}</td>
         <td className="px-6 py-3 font-semibold ">{start_date}</td>
@@ -28,8 +28,8 @@ export default function CourseItem({
           </span>
           )}
         </td>
-        <td className="px-6 py-3">
-          <ViewCourseLink title={"Details"} path={"/courses/"}/>
+        <td className="px-6 py-3 inline-flex">
+          <ViewCourseLink title={"Details"} path={`/courses/${id}`}/>
         </td>
       </tr>
     </>

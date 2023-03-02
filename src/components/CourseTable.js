@@ -2,8 +2,8 @@ import React, { useEffect,useState } from 'react';
 import CourseItem from './CourseItem';
 
 export default function CourseTable({id,title,online,start_date,end_date,imagePath,duration}){
-    const url = 'http://localhost:3001/courses';
-    const [courses,setCourses]=useState([]);
+    const url = 'http://localhost:3001/courses/';
+    const [courses,setCourses]= useState([]);
 
 
 useEffect(()=>{
@@ -41,7 +41,7 @@ console.log("Courses",courses);
                             </thead>
                             <tbody className="text-indigo-800 text-center">
                                 {courses.length && courses.map((item) =>{
-                                     return (<CourseItem key={item.id} title={item.title} duration={item.duration} start_date ={item.dates.start_date} end_date={item.dates.end_date} online={item.online}/>)
+                                     return (<CourseItem key={item.id} title={item.title} duration={item.duration} start_date ={item.dates.start_date} end_date={item.dates.end_date} online={item.online} id={item.id}/>)
                                 }
         
                                 )}                                                           
