@@ -17,8 +17,8 @@ const PageFooter = () => {
     <ul className="flex flex-row">
     {teamMembers.map((member => 
         (
-          <li className="flex flex-col">
-            <span className='pl-4' key={member.name}>
+          <li className="flex flex-col" key={member.name}>
+            <span className='pl-4' >
               <a href={member.github} title={member.name} className='text-gray-400 hover:text-blue-900 hover:border-indigo-800 hover:border-b-2 duration-100 '>
           <FontAwesomeIcon icon={faCode} /> {member.name}</a>
           </span>
