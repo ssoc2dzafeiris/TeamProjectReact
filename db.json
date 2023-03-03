@@ -1,4 +1,42 @@
 {
+  "teamusers": [
+    {
+      "fname": "Dimitris",
+      "lname": "Zafeiris",
+      "github": "https://github.com/ssoc2dzafeiris",
+      "email": "kremou115@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/dimizafe/",
+      "bio": "a passionate Software developer,has a short exrerience in Front and Back End Development.",
+      "title": "Junior Software Developer"
+    },
+    {
+      "fname": "Stelios",
+      "lname": "Katsaberis",
+      "github": "",
+      "email": "",
+      "linkedin": "",
+      "bio": "",
+      "title": "React developer"
+    },
+    {
+      "fname": "Nikolaos",
+      "lname": "Katsafados",
+      "github": "",
+      "email": "",
+      "linkedin": "",
+      "bio": "",
+      "title": "Professor"
+    },
+    {
+      "fname": "Nikos",
+      "lname": "Petrolis",
+      "github": "",
+      "email": "",
+      "linkedin": "",
+      "bio": "",
+      "title": "dgdgdfgdfgdf"
+    }
+  ],
   "stats": [
     {
       "id": "01",
@@ -86,5 +124,6 @@
       "online": false,
       "description": "Το σεμινάριο απευθύνεται σε συμμετέχοντες που επιθυμούν να μάθουν πώς να επεξεργάζονται εικόνες και να δημιουργούν τα δικά τους γραφικά με εύκολο τρόπο. εικόνας. Χρησιμοποιώντας την online πλατφόρμα σχεδιασμού Canva θα φτιάξουμε εύκολα και γρήγορα δελεαστικά δημιουργικά. Αν θέλεις να ανεβάζεις ελκυστικές αναρτήσεις στο διαδίκτυο, αυτό το σεμινάριο είναι φτιαγμένο για σένα!"
     }
+    
   ]
 }
