@@ -58,11 +58,11 @@ export default function EditPage(props)  {
    
     return (
         
-        <div className="relative z-10 " aria-labelledby="modal-title" role="dialog" aria-modal="true">      
-        <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>  
-        <div style={{ position: 'relative', zIndex: '2'}} className="">
+        // <div className="z-10 " aria-labelledby="modal-title" role="dialog" aria-modal="true">      
+        // <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>  
+        <div className="overflow-scroll">
         
-            <form onSubmit={handleSubmit} className="fixed top-10 left-10 right-10 bg-sky-100">
+            <form onSubmit={handleSubmit} className="fixed top-5 left-5 right-10 bg-sky-100">
             <button type="button" class="absolute top-0 right-0 h-16 w-16 box-border h-12 w-12 p-4 border-4 bg-gradient-to-r from-sky-400 to-red-500 hover:from-pink-500 hover:to-blue-500"
             onClick={() => {
             props.close();
@@ -159,7 +159,7 @@ export default function EditPage(props)  {
 
 
         </div>
-        </div>
+        // </div>
  );
 
 }
