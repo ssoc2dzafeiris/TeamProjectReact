@@ -46,11 +46,11 @@ export default function CourseDetails(){
                             <li className="py-2 flex flex-col">
                             <div className="flex items-center">
                                 <div><span className="text-normal font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-100 bg-indigo-600 mr-3"><i className="fa-solid fa-calendar-minus"></i></span></div>
-                        <div><h4 className="text-slate-600 hover:text-indigo-500 font-semibold hover:underline text-normal">Start Date:<span>{course.dates.start_date}</span></h4></div></div></li>
+                        <div><h4 className="text-slate-600 hover:text-indigo-500 font-semibold hover:underline text-normal">Start Date:<span>{course.dates.start_date.split("-").reverse().join("/")}</span></h4></div></div></li>
                         <li className="py-2 flex flex-col">
                             <div className="flex items-center">
                                 <div><span className="text-normal font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-100 bg-indigo-600 mr-3"><i className="fa-solid fa-calendar-plus"></i></span></div>
-                        <div><h4 className="text-slate-600 hover:text-indigo-500 font-semibold hover:underline text-normal">End Date:<span>{course.dates.end_date}</span></h4></div></div></li>
+                        <div><h4 className="text-slate-600 hover:text-indigo-500 font-semibold hover:underline text-normal">End Date:<span>{course.dates.end_date.split("-").reverse().join("/")}</span></h4></div></div></li>
                         <li className="py-2 flex flex-col">
                             <div className="flex items-center">
                                 <div><span className="text-normal font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-100 bg-indigo-600 mr-3"><i className="fa-solid fa-clock"></i></span></div>

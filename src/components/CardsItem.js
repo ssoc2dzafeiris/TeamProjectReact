@@ -17,8 +17,8 @@ const CardsItem = ({id, title, imagePath, dates, price, duration, online}) => {
                     <div className='font-semibold p-2'><FontAwesomeIcon icon={faCoins} /> Τιμή {price.normal}€</div>
                 </div>
                 <div className='flex flex-row justify-between text-sm px-8 py-4'>
-                    <div><FontAwesomeIcon icon={faCalendar} /> {dates.start_date}</div>
-                    <div><FontAwesomeIcon icon={faCalendarCheck} /> {dates.end_date}</div>
+                    <div><FontAwesomeIcon icon={faCalendar} /> {dates.start_date.split("-").reverse().join("/")}</div>
+                    <div><FontAwesomeIcon icon={faCalendarCheck} /> {dates.end_date.split("-").reverse().join("/")}</div>
                 </div>
                 <div className='flex flex-row justify-between text-sm px-8 py-4'>
                     <div><b>Διάρκεια:</b> {duration} </div>
