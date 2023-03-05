@@ -2,12 +2,11 @@ import {useState,useEffect} from 'react';
 import {useParams} from "react-router-dom";
 import LoadingSpinner from './LoadingSpinner';
 
-export default function CoursePractisePage(){
+export default function CourseDetails(){
     
     const API = 'http://localhost:3001/courses/';
     const params = useParams();
     const [course,setCourse]= useState(null);
-    const [isLoading, setIsLoading] = useState(false);
     // const navigate = useNavigate();
 
     const fetchDetails = () =>{
@@ -16,20 +15,21 @@ export default function CoursePractisePage(){
         fetch(`${API}${params.id}`)
         .then((res)=> res.json())
         .then((data) => setCourse(data))
-        
         .catch((error) => {
             console.log("Error in fetching:",error)
           });
         }, 1500);
     }
     useEffect(()=>{
-        fetchDetails()
+        fetchDetails();
+        
         // .then(navigate("/courses/01"))
     },[]);
 
+
     if (!course) {
         return(
-            <div><LoadingSpinner/></div>
+            <><LoadingSpinner/></>
         );
     }else{
         return(
