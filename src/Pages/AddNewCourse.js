@@ -18,7 +18,7 @@ const AddNewCourse = () => {
     const [showAlert, setShowAlert] = useState(false);
 
     const handleSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault();
         const data = {
             title,
             imagePath,
@@ -52,8 +52,8 @@ const AddNewCourse = () => {
             <div className="w-5/6 mt-5 mx-auto flex justify-center items-center h-screens">
                 <form onSubmit={handleSubmit} className=" max-h-90vh w-5/6 bg-white p-8 rounded-lg shadow-md overflow-y-auto ">
                     {showAlert && (
-                        <div className="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
-                            <span className="font-medium">Το μάθημα καταχωρήθηκε επιτυχώς!</span>
+                        <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
+                            <span class="font-medium">Το μάθημα καταχωρήθηκε επιτυχώς!</span>
                         </div>
                     )}
                     <h1 className="font-extrabold font-weight: 900 text-5xl mb-8  ">Add Course</h1>
@@ -64,11 +64,11 @@ const AddNewCourse = () => {
                                 Title
                             </label>
                             <input
-                                className="  appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 justify-center"
+                                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 justify-center"
                                 name="title" type="text"
                                 onChange={
                                     (e) => setTitle((e.target.value))
-                                } placeholder="Lesson"></input>
+                                } placeholder="Lesson" required ></input>
                         </div>
                         <div className="w-full md:w-1/2 px-2">
                             <label
@@ -77,7 +77,7 @@ const AddNewCourse = () => {
                             </label>
                             <input
                                 className=" block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                name="duration" type="text" onChange={(e) => setDuration((e.target.value))} placeholder="Duration"></input>
+                                name="duration" type="text" onChange={(e) => setDuration((e.target.value))} placeholder="Duration" required></input>
                         </div>
                     </div>
                     <label
@@ -86,7 +86,7 @@ const AddNewCourse = () => {
                     </label>
                     {<input
                         className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                        name="imagePath" type="text" onChange={(e) => setImagePath((e.target.value))} placeholder="Image Path"></input>}
+                        name="imagePath" type="text" onChange={(e) => setImagePath((e.target.value))} placeholder="Image Path" required></input>}
                     <label
                         className=" uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
                         online
@@ -98,7 +98,7 @@ const AddNewCourse = () => {
                     </label>
                     <textarea
                         className="block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3"
-                        name="description" type="text" onChange={(e) => setDescription((e.target.value))}>
+                        name="description" type="text" onChange={(e) => setDescription((e.target.value))} required maxlength="500">
                     </textarea>
 
                     <p className="font-bold font-weight: 700">Dates</p>
@@ -110,14 +110,14 @@ const AddNewCourse = () => {
                             </label>
                             <input
                                 className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                name="start_date" type="date" onChange={(e) => setStart_date((e.target.value))}></input>
+                                name="start_date" type="date" onChange={(e) => setStart_date((e.target.value))} required></input>
                         </div>
                         <div className="w-full md:w-1/2 px-2 mb-4 md:mb-0">
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
                                 End Date
                             </label>
                             <input className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                name="end_date" type="date" onChange={(e) => setEnd_date((e.target.value))}></input>
+                                name="end_date" type="date" onChange={(e) => setEnd_date((e.target.value))} required></input>
                         </div>
                     </div>
                     <p className="font-bold font-weight: 700"> Price </p>
@@ -130,14 +130,14 @@ const AddNewCourse = () => {
                                 Early Bird
                             </label>
                             <input className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                name="early_bird" type="number" onChange={(e) => setEarly_bird((e.target.value))}></input>
+                                name="early_bird" type="number" onChange={(e) => setEarly_bird((e.target.value))} required></input>
                         </div>
                         <div className="w-full md:w-1/2 px-2 mb-4 md:mb-0">
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
                                 Normal Price
                             </label>
                             <input className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                name="normal" type="number" onChange={(e) => setNormal((e.target.value))}></input>
+                                name="normal" type="number" onChange={(e) => setNormal((e.target.value))} required></input>
                         </div>
                     </div>
                     <button className="float-right bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-right " type='submit'> Add Course </button>
