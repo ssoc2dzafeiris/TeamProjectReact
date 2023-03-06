@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
 
 const AddNewCourse = () => {
-    <div className="row">
-        <Link to='/' className='text-black-50 p-2 col-md-5'>Go Back</Link>
-    </div>
-
+   
     const [title, setTitle] = useState('');
     const [duration, setDuration] = useState('');
     const [imagePath, setImagePath] = useState('');
@@ -31,7 +27,7 @@ const AddNewCourse = () => {
 
 
 
-        fetch('http://localhost:3001/courses', {
+        fetch('https://chain-legendary-strawflower.glitch.me/courses', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
@@ -49,14 +45,19 @@ const AddNewCourse = () => {
     }
     return (
         <>
-            <div className="w-5/6 mt-5 mx-auto flex justify-center items-center h-screens">
-                <form onSubmit={handleSubmit} className=" max-h-90vh w-5/6 bg-white p-8 rounded-lg shadow-md overflow-y-auto ">
+            <div className="w-5/6 mt-5 mx-auto flex justify-center items-center h-screens mb-10 py-2">
+                <form onSubmit={handleSubmit} className=" max-h-90vh w-5/6 bg-white p-8 rounded-lg shadow-lg overflow-y-auto ">
                     {showAlert && (
+<<<<<<< Updated upstream
                         <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
                             <span class="font-medium">Το μάθημα καταχωρήθηκε επιτυχώς!</span>
+=======
+                        <div className="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
+                            <span className="font-semibold">Το μάθημα καταχωρήθηκε επιτυχώς!</span>
+>>>>>>> Stashed changes
                         </div>
                     )}
-                    <h1 className="font-extrabold font-weight: 900 text-5xl mb-8  ">Add Course</h1>
+                    <h1 className="font-extrabold font-weight: 900 text-5xl mb-8">Add Course</h1>
                     <div className="flex flex-wrap -mx-2">
                         <div className="w-full md:w-1/2 px-2 mb-4 md:mb-0">
                             <label
@@ -140,7 +141,7 @@ const AddNewCourse = () => {
                                 name="normal" type="number" onChange={(e) => setNormal((e.target.value))} required></input>
                         </div>
                     </div>
-                    <button className="float-right bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-right " type='submit'> Add Course </button>
+                    <button className="float-right bg-blue-400 hover:bg-blue-800 hover:scale-90 text-white font-bold py-3 px-4 rounded text-center hover:duration-500" type='submit'>Add Course</button>
                 </form>
 
 
