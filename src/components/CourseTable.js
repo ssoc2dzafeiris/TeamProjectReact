@@ -2,7 +2,7 @@ import React, { useEffect,useState } from 'react';
 import CourseItem from '../components/Utilities/Cards/CourseItem.js';
 
 export default function CourseTable({id,title,online,start_date,end_date,imagePath,duration}){
-    const url = 'http://localhost:3001/courses/';
+    const url = 'https://chain-legendary-strawflower.glitch.me/courses';
     const [courses,setCourses]= useState([]);
 
 

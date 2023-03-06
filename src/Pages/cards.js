@@ -8,7 +8,7 @@ const Cards = () => {
     const [coursesLoading, setCoursesLoading] = useState(true)
   
     useEffect(() => {
-        axios.get("http://localhost:3001/courses")
+        axios.get("https://chain-legendary-strawflower.glitch.me/courses")
         .then(res => {
         setCoursesLoading(false)
         setData(res.data);

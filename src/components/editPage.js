@@ -1,26 +1,13 @@
 import React, { useState } from 'react';
-import {Link} from 'react-router-dom';
-
-
 import axios from "axios";
-//import { render } from 'react-dom';
-
 console.clear();
-
 export default function EditPage(props)  {
-    <div className="row">
-        <Link to='/' className='text-black-50 p-2 col-md-5'>Go Back</Link>
-    </div>
-
-    
-    
    // const [post, setPost] = useState(null);
     const [title, setTitle] = useState(props.data.title);
     const [duration, setDuration] = useState(props.data.duration);
     const [imagePath, setImagePath] = useState(props.data.imagePath);
     const [online, setOnline] = useState(props.data.online);
     const [description, setDescription] = useState(props.data.description);
- 
     const [start_date, setStart_date] = useState(props.data.dates.start_date);
     const [end_date, setEnd_date] = useState(props.data.dates.end_date);
     const [early_bird, setEarly_bird] = useState(props.data.price.early_bird);
@@ -40,23 +27,18 @@ export default function EditPage(props)  {
             online,
             description,
         };
-            
-        console.log('Link http://localhost:3001/courses/'+props.idNumber);
-        axios.put('http://localhost:3001/courses/'+props.idNumber, data)
+        console.log('Link https://chain-legendary-strawflower.glitch.me/courses'+props.idNumber);
+        axios.put('https://chain-legendary-strawflower.glitch.me/courses'+props.idNumber, data)
         .then((response) => {
             console.log("THE END",response)
             }
         )
         .catch((error) => console.log(error));
-            
         props.close();
         props.fetchDetails();
     }
- 
     if (!props.open) return null;
-   
     return (
-        
         // <div className="z-10 " aria-labelledby="modal-title" role="dialog" aria-modal="true">      
         // <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>  
         <div className="overflow-scroll">
@@ -134,11 +116,8 @@ export default function EditPage(props)  {
                     </div>
                 </div>
                 <p className="m-3 font-bold font-weight: 700"> Price </p>
-
                 <div className="flex flex-wrap -mx-2">
                     <div className="w-full md:w-1/2 px-2 mb-4 md:mb-0">
-
-
                         <label className="m-3 block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
                             Early Bird
                         </label>
@@ -155,8 +134,6 @@ export default function EditPage(props)  {
                 </div>
                 <button  className="m-2 float-right bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-right " type='submit'> Update Course </button>
             </form>
-
-
         </div>
         // </div>
  );

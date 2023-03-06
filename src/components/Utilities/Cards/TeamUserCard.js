@@ -9,11 +9,9 @@ export default function TeamUserCard({title,fname,lname,bio,github,linkedin,emai
          <div className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-indigo-600 dark:border-slate-700 dark:hover:border-transparent">
                 <img className="object-cover w-32 h-32 rounded-full ring-4 ring-slate-300" src={`${github}.png`} alt={`${fname} ${lname}`} title={`${fname} ${lname}`}/>
                 <h1 className="mt-4 text-2xl font-semibold text-slate-700 capitalize dark:text-white group-hover:text-white">{fname} {lname}</h1>
-                <p className="mt-2 text-slate-500 capitalize dark:text-slate-300 group-hover:text-slate-300">{title}</p>
-                <p className="mt-2 text-slate-500 capitalize dark:text-slate-300 group-hover:text-slate-300">{bio}</p>
+                <p className="mt-2 text-slate-600 capitalize font-semibold dark:text-slate-200 group-hover:text-slate-200 group-hover:border-b-2">{title}</p>
                 <div className="flex mt-3 -mx-2 ">
                     <a href={`mailto:${email}`} title="email" className="mx-2 text-slate-600 dark:text-slate-300 hover:text-slate-500 dark:hover:text-slate-300 group-hover:text-white" aria-label="Email">
-                        
                     <FontAwesomeIcon icon={faAt} />
                     </a>
                     <a href={linkedin} title="linkedin" className="mx-2 text-slate-600 dark:text-slate-300 hover:text-slate-500 dark:hover:text-slate-300 group-hover:text-white" aria-label="LinkedIn">
@@ -23,6 +21,8 @@ export default function TeamUserCard({title,fname,lname,bio,github,linkedin,emai
                         <FontAwesomeIcon icon={faCodeCompare} />
                     </a>
                 </div>
+                <p className="mt-3 text-slate-500  text-center capitalize dark:text-slate-300 group-hover:text-slate-300 ">{bio}</p>
+               
                 </div>
         </>
 

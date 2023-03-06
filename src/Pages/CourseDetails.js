@@ -6,7 +6,7 @@ import Buttons from "../components/Utilities/Buttons/buttons";
 
 export default function CourseDetails(){
     
-    const API = 'http://localhost:3001/courses/';
+    const API = 'https://chain-legendary-strawflower.glitch.me/courses';
     const params = useParams();
     const [course,setCourse]= useState(null);
     // const navigate = useNavigate();
@@ -14,7 +14,7 @@ export default function CourseDetails(){
     const fetchDetails = () =>{
         setTimeout(function() 
         {
-        fetch(`${API}${params.id}`)
+        fetch(`${API}/${params.id}`)
         .then((res)=> res.json())
         .then((data) => setCourse(data))
         
@@ -34,7 +34,7 @@ export default function CourseDetails(){
         return(
             <>
             <div className="flex flex-wrap items-center my-5 p-5 rounded-2xl shadow-3xl bg-white selection:bg-fuchsia-200 selection:text-fuchsia-900">
-                <div className="max-w-full md:w-6/12 ml-auto mr-auto mt-auto flex flex-col">
+                <div className="max-w-full md:w-6/12 ml-auto mr-auto flex flex-col">
                     <img src={course.imagePath ? `/images${course.imagePath}` : `/images/courses/notfound.png`} alt={course.title} className='object-cover object-center rounded-lg shadow-lg' />
                     </div>
                         <div className="w-full md:w-5/12 ml-auto mr-auto flex flex-col">

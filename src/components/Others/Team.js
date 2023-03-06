@@ -4,8 +4,6 @@ import TeamUserCard from '../Utilities/Cards/TeamUserCard';
 export default function Team(){
     const UserApi = 'https://chain-legendary-strawflower.glitch.me/teamusers';
     const [teamusers,setTeamusers] = useState(null);
-
-
     const getTeamUser = () =>{
         fetch(UserApi)
         .then((res)=> res.json())
