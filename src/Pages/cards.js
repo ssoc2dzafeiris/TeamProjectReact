@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
-import CardsItem from './components/Utilities/Cards/CardsItem';
-import CoursesLoading from './components/Utilities/Loaders/CoursesLoading';
+import CardsItem from '../components/Utilities/Cards/CardsItem';
+import CoursesLoading from '../components/Utilities/Loaders/CoursesLoading';
 
 const Cards = () => {
     const [data, setData] = useState([]);

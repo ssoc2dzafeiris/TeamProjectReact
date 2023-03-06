@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import TeamUserCard from './TeamUserCard';
+import TeamUserCard from '../Utilities/Cards/TeamUserCard';
 
 export default function Team(){
     const UserApi = 'https://chain-legendary-strawflower.glitch.me/teamusers';

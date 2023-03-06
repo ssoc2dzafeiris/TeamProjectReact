@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import TeamSection from './Team';
+import TeamSection from '../components/Others/Team';
 
 export default function About(){
     return(

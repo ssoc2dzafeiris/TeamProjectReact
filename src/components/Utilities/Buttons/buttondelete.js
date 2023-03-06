@@ -32,8 +32,8 @@ export default function ButtonDelete(props){
     }
   
     return (
-        <button onClick = {() => deleteUser(props.idNumber)} class="border-4 border-indigo-200 hover:border-b-gray-500 bg-blue-500 hover:bg-cyan-600">
-        <span class="m-8">Delete</span>
+        <button onClick = {() => deleteUser(props.idNumber)} className="border-4 border-indigo-200 hover:border-b-gray-500 bg-blue-500 hover:bg-cyan-600">
+        <span className="m-8">Delete</span>
         </button>
     );
 }

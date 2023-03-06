@@ -1,7 +1,7 @@
 import React from 'react';
 import {Outlet } from 'react-router-dom';
-import Navbar from './Layout/Navbar';
-import PageFooter from "./Footer"
+import Navbar from './Navbar'
+import PageFooter from './Footer'
 
 export default function SharedLayout(){
 

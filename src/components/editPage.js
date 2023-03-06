@@ -45,8 +45,7 @@ export default function EditPage(props)  {
         axios.put('http://localhost:3001/courses/'+props.idNumber, data)
         .then((response) => {
             console.log("THE END",response)
-
-        }
+            }
         )
         .catch((error) => console.log(error));
             

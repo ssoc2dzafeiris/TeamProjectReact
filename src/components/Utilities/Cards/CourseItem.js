@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faXmark } from "@fortawesome/free-solid-svg-icons";
-import ViewCourseLink from "./ViewCourseLink";
+import ViewCourseLink from "../Buttons/ViewCourseLink";
 
 export default function CourseItem({id,
   title,
