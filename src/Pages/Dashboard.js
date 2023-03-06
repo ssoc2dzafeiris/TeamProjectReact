@@ -1,7 +1,7 @@
 import React from "react";
-import Stats from "./Stats";
-import Welcome from "./Welcome";
-import CourseTable from "./CourseTable";
+import Stats from "../components/Others/Stats";
+import Welcome from "../components/Others/Welcome";
+import CourseTable from "../components/CourseTable";
 
 export default function Dashboard() {
 
