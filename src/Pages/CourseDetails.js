@@ -4,12 +4,11 @@ import LoadingSpinner from './LoadingSpinner';
 
 import Buttons from "./buttons";
 
-export default function CoursePractisePage(){
+export default function CourseDetails(){
     
     const API = 'http://localhost:3001/courses/';
     const params = useParams();
     const [course,setCourse]= useState(null);
-    const [isLoading, setIsLoading] = useState(false);
     // const navigate = useNavigate();
 
     const fetchDetails = () =>{
@@ -26,14 +25,11 @@ export default function CoursePractisePage(){
     }
     useEffect(()=>{
         fetchDetails()
-        // .then(navigate("/courses/01"))
     },[]);
 
 
     if (!course) {
-        return(
-            <div><LoadingSpinner/></div>
-        );
+        return(<div><LoadingSpinner/></div>);
     }else{
         return(
             <>

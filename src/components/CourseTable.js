@@ -10,7 +10,7 @@ useEffect(()=>{
     fetch(url)
     .then((response)=> response.json())
     .then((data)=> {
-        const lastCourses = data.slice(-4);
+        const lastCourses = data.slice(-5);
         setCourses(lastCourses);});
 },[])
 
@@ -41,7 +41,7 @@ useEffect(()=>{
                             </thead>
                             <tbody className="text-indigo-800 text-center">
                                 {courses.length && courses.map((item) =>{
-                                     return (<CourseItem key={item.id} title={item.title} duration={item.duration} start_date ={item.dates.start_date} end_date={item.dates.end_date} online={item.online} id={item.id}/>)
+                                     return (<CourseItem key={item.id} id={item.id} title={item.title} duration={item.duration} start_date ={item.dates.start_date} end_date={item.dates.end_date} online={item.online} />)
                                 }
         
                                 )}                                                           

@@ -63,7 +63,7 @@ export default function EditPage(props)  {
         <div className="overflow-scroll">
         
             <form onSubmit={handleSubmit} className="fixed top-5 left-5 right-10 bg-sky-100">
-            <button type="button" class="absolute top-0 right-0 h-16 w-16 box-border h-12 w-12 p-4 border-4 bg-gradient-to-r from-sky-400 to-red-500 hover:from-pink-500 hover:to-blue-500"
+            <button type="button" class="absolute top-0 right-0 h-16 w-16 box-border p-4 border-4 bg-gradient-to-r from-sky-400 to-red-500 hover:from-pink-500 hover:to-blue-500"
             onClick={() => {
             props.close();
             }}

@@ -1,11 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Dashboard from "./Dashboard"
-import Cards from "./cards"
-import AddNewCourse from "./AddNewCourse"
-import About from './About'
-import Error from "./ErrorPage";
-import SharedLayout from "./SharedLayout"
-import CourseDetails from './CoursePractisePage';
+
+// imported all the basics pages
+import Dashboard from "./Pages/Dashboard";
+import Cards from "./Pages/cards";
+import AddNewCourse from "./Pages/AddNewCourse";
+import About from './Pages/About';
+import Error from "./Pages/ErrorPage";
+import CourseDetails from './Pages/CourseDetails';
+
+// import the shared layout component
+import SharedLayout from "./Layout/SharedLayout";
 
 
 const App = () => {

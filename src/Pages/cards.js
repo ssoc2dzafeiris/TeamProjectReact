@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
-import CardsItem from './CardsItem';
-import CoursesLoading from './CoursesLoading';
-import {Link} from 'react-router-dom'
+import CardsItem from './components/Utilities/Cards/CardsItem';
+import CoursesLoading from './components/Utilities/Loaders/CoursesLoading';
 
 const Cards = () => {
     const [data, setData] = useState([]);
