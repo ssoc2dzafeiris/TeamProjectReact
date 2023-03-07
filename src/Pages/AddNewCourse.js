@@ -48,13 +48,9 @@ const AddNewCourse = () => {
             <div className="w-5/6 mt-5 mx-auto flex justify-center items-center h-screens mb-10 py-2">
                 <form onSubmit={handleSubmit} className=" max-h-90vh w-5/6 bg-white p-8 rounded-lg shadow-lg overflow-y-auto ">
                     {showAlert && (
-<<<<<<< Updated upstream
-                        <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
-                            <span class="font-medium">Το μάθημα καταχωρήθηκε επιτυχώς!</span>
-=======
+
                         <div className="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
                             <span className="font-semibold">Το μάθημα καταχωρήθηκε επιτυχώς!</span>
->>>>>>> Stashed changes
                         </div>
                     )}
                     <h1 className="font-extrabold font-weight: 900 text-5xl mb-8">Add Course</h1>

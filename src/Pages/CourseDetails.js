@@ -6,7 +6,7 @@ import Buttons from "../components/Utilities/Buttons/buttons";
 
 export default function CourseDetails(){
     
-    const API = 'https://chain-legendary-strawflower.glitch.me/courses';
+    const API = 'https://chain-legendary-strawflower.glitch.me/courses/';
     const params = useParams();
     const [course,setCourse]= useState(null);
     // const navigate = useNavigate();
@@ -14,7 +14,7 @@ export default function CourseDetails(){
     const fetchDetails = () =>{
         setTimeout(function() 
         {
-        fetch(`${API}/${params.id}`)
+        fetch(`${API}${params.id}`)
         .then((res)=> res.json())
         .then((data) => setCourse(data))
         
