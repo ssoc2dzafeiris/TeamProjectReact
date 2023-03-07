@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
 
 const AddNewCourse = () => {
-   
+    <div className="row">
+        <Link to='/' className='text-black-50 p-2 col-md-5'>Go Back</Link>
+    </div>
+
     const [title, setTitle] = useState('');
     const [duration, setDuration] = useState('');
     const [imagePath, setImagePath] = useState('');
@@ -27,7 +31,7 @@ const AddNewCourse = () => {
 
 
 
-        fetch('https://chain-legendary-strawflower.glitch.me/courses', {
+        fetch('http://localhost:3001/courses', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
@@ -45,15 +49,14 @@ const AddNewCourse = () => {
     }
     return (
         <>
-            <div className="w-5/6 mt-5 mx-auto flex justify-center items-center h-screens mb-10 py-2">
-                <form onSubmit={handleSubmit} className=" max-h-90vh w-5/6 bg-white p-8 rounded-lg shadow-lg overflow-y-auto ">
+            <div className="w-full mt-2 mx-auto flex justify-center items-center h-screens">
+                <form onSubmit={handleSubmit} className=" max-h-90vh w-5/6 bg-white p-8 rounded-lg shadow-md overflow-y-auto ">
                     {showAlert && (
-
-                        <div className="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
-                            <span className="font-semibold">Το μάθημα καταχωρήθηκε επιτυχώς!</span>
+                        <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
+                            <span class="font-medium">Το μάθημα καταχωρήθηκε επιτυχώς!</span>
                         </div>
                     )}
-                    <h1 className="font-extrabold font-weight: 900 text-5xl mb-8">Add Course</h1>
+                    <h1 className="font-extrabold font-weight: 900 text-4xl mb-4 mt-0  ">Add Course</h1>
                     <div className="flex flex-wrap -mx-2">
                         <div className="w-full md:w-1/2 px-2 mb-4 md:mb-0">
                             <label
@@ -61,7 +64,7 @@ const AddNewCourse = () => {
                                 Title
                             </label>
                             <input
-                                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 justify-center"
+                                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 justify-center"
                                 name="title" type="text"
                                 onChange={
                                     (e) => setTitle((e.target.value))
@@ -73,7 +76,7 @@ const AddNewCourse = () => {
                                 Duration
                             </label>
                             <input
-                                className=" block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                className=" block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                                 name="duration" type="text" onChange={(e) => setDuration((e.target.value))} placeholder="Duration" required></input>
                         </div>
                     </div>
@@ -82,13 +85,15 @@ const AddNewCourse = () => {
                         Image Path
                     </label>
                     {<input
-                        className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                         name="imagePath" type="text" onChange={(e) => setImagePath((e.target.value))} placeholder="Image Path" required></input>}
-                    <label
-                        className=" uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
-                        online
-                    </label>
-                    <input type="checkbox" onChange={(e) => setOnline((e.target.checked))} />
+                    <div className="flex items-center mb-2">
+                        <label
+                            className=" uppercase tracking-wide text-gray-700 text-xs font-bold  mr-1" >
+                            online
+                        </label>
+                        <input className=" px-2 py-1" type="checkbox" onChange={(e) => setOnline((e.target.checked))} />
+                    </div>
                     <label
                         className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
                         description
@@ -106,14 +111,14 @@ const AddNewCourse = () => {
                                 Start Date
                             </label>
                             <input
-                                className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                                 name="start_date" type="date" onChange={(e) => setStart_date((e.target.value))} required></input>
                         </div>
                         <div className="w-full md:w-1/2 px-2 mb-4 md:mb-0">
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
                                 End Date
                             </label>
-                            <input className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            <input className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                                 name="end_date" type="date" onChange={(e) => setEnd_date((e.target.value))} required></input>
                         </div>
                     </div>
@@ -126,18 +131,22 @@ const AddNewCourse = () => {
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
                                 Early Bird
                             </label>
-                            <input className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            <input className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                                 name="early_bird" type="number" onChange={(e) => setEarly_bird((e.target.value))} required></input>
                         </div>
                         <div className="w-full md:w-1/2 px-2 mb-4 md:mb-0">
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
                                 Normal Price
                             </label>
-                            <input className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            <input className="  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                                 name="normal" type="number" onChange={(e) => setNormal((e.target.value))} required></input>
+                            <div className=" mb-4 flex flex-wrap justify-end">
+                                <button className=" m-3 float-right bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-right " type='submit'>
+                                    Add Course </button>
+                            </div>
                         </div>
                     </div>
-                    <button className="float-right bg-blue-400 hover:bg-blue-800 hover:scale-90 text-white font-bold py-3 px-4 rounded text-center hover:duration-500" type='submit'>Add Course</button>
+
                 </form>
 
 
