@@ -11,7 +11,7 @@ export default function ButtonDelete(props){
     function deleteUser(id){
         var answer = window.confirm("Delete data?");
         if (answer) {
-            let link = 'https://chain-legendary-strawflower.glitch.me/courses'+id;
+            let link = 'https://chain-legendary-strawflower.glitch.me/courses/'+id;
             //console.log("Try delete",answer, link);
             //console.log(typeof link);
             axios.delete(link)
