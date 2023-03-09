@@ -25,7 +25,7 @@ export default function Team(){
         <div className="grid grid-cols-1 gap-5 mt-1 xl:mt-10 md:grid-cols-2 xl:grid-cols-4 ">
             {teamusers.length && 
             teamusers.map((user) =>{ 
-                return(<TeamUserCard key={user.fname} fname={user.fname} lname={user.lname} title={user.title} linkedin={user.linkedin} email={user.email} github={user.github} bio={user.bio}/>)
+                return(<TeamUserCard key={user.lname} fname={user.fname} lname={user.lname} title={user.title} linkedin={user.linkedin} email={user.email} github={user.github} bio={user.bio}/>)
             })}
             </div>
         </div>
