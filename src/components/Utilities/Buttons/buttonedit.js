@@ -1,5 +1,5 @@
 import { useState } from "react";
-import EditPage from '../../editPage'
+import EditPage from "../../editPage";
 
 export default function ButtonEdit(props){
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,7 +16,7 @@ export default function ButtonEdit(props){
             <button onClick={() => openModal()} className="border-4 border-indigo-200 hover:border-b-gray-500 bg-blue-500 hover:bg-cyan-600">
             <span className="m-8">Edit</span></button>
             
-            <EditPage fetchDetails={props.fetchDetails} data = {props.data} idNumber={props.idNumber} open={isModalOpen} close={closeModal} />
+            <EditPage fetchDetails={props.fetchDetails}  data = {props.data} idNumber={props.idNumber} open={isModalOpen} close={closeModal} />
         </div>
     );
 }

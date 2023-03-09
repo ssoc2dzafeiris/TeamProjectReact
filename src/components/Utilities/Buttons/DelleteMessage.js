@@ -1,8 +1,32 @@
 import React from 'react'
 import 'animate.css'
+import axios from 'axios';  
+import { useNavigate } from "react-router-dom";    
 
-const Modal = (props) => {
-    if(!props.openModal) return null
+
+export default function DelleteMessage (props){
+  let navigate = useNavigate(); 
+  const routeChange = () =>{ 
+      let path = `/courses`; 
+      navigate(path);
+    }
+  function deleteUser(id){
+             let link = 'https://chain-legendary-strawflower.glitch.me/courses/'+id;
+
+              axios.delete(link)
+                  .then(response => {
+                      console.log( 'Delete successful')
+                      routeChange();
+    
+                  }
+                      )
+                  .catch(error => {
+                      console.error('There was an error!', error);
+              });
+          
+     }
+
+    if(!props.open) return null
     return (
       <div className="relative z-10 " aria-labelledby="modal-title" role="dialog" aria-modal="true">
       <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
@@ -25,7 +49,7 @@ const Modal = (props) => {
               </div>
             </div>
             <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-              <button type="button" className="inline-flex w-full justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm">Διαγραφή</button>
+              <button onClick = {() => deleteUser(props.idNumber)}  type="button" className="inline-flex w-full justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm">Διαγραφή</button>
               <button onClick={props.closeModal} type="button" className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">Ακύρωση</button>
             </div>
           </div>
@@ -34,5 +58,3 @@ const Modal = (props) => {
     </div>
     )
 }
-
-export default Modal
