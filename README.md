@@ -1,12 +1,10 @@
 ## **START School of Code: React Team Project**
 This README includes general information about the project, the methods and modules used for building it and the team behind it.
 
-You can find a live demo of this project [HERE]((https://whimsical-naiad-4249a5.netlify.app/)) and the GitHub repository [HERE](https://github.com/ssoc2dzafeiris/TeamProjectReact).
+You can find a live demo of this project [HERE](https://whimsical-naiad-4249a5.netlify.app/) and the GitHub repository [HERE](https://github.com/ssoc2dzafeiris/TeamProjectReact).
 
 ## Table Of Contents ##
 
-- [**START School of Code: React Team Project**](#start-school-of-code-react-team-project)
-- [Table Of Contents](#table-of-contents)
 - [General Information](#general-information)
 - [Modules and Methods](#modules-and-methods)
 - [The Team](#the-team)
