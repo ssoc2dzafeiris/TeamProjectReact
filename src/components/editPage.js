@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
-import {Link} from 'react-router-dom';
 import axios from "axios";
 
 export default function EditPage(props)  {
-    <div className="row">
-        <Link to='/' className='text-black-50 p-2 col-md-5'>Go Back</Link>
-    </div>
-
 
     const [title, setTitle] = useState(props.data.title);
     const [duration, setDuration] = useState(props.data.duration);

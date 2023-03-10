@@ -1,19 +1,24 @@
 import React, { useEffect,useState } from 'react';
 import CourseItem from '../components/Utilities/Cards/CourseItem.js';
+import CircleSpinner from './Utilities/Loaders/CircleSpinner';
 
 export default function CourseTable({id,title,online,start_date,end_date,imagePath,duration}){
     const url = 'https://chain-legendary-strawflower.glitch.me/courses';
     const [courses,setCourses]= useState([]);
 
+    const fetchLastCourses = () =>{
+        fetch(url)
+        .then((response)=> response.json())
+        .then((data)=> {
+            const lastCourses = data.slice(-5);
+            setCourses(lastCourses);});
+    }
 
-useEffect(()=>{
-    fetch(url)
-    .then((response)=> response.json())
-    .then((data)=> {
-        const lastCourses = data.slice(-5);
-        setCourses(lastCourses);});
-},[])
+    useEffect(()=>{
+        fetchLastCourses();
+    },[])
 
+    if( courses.length === 0) return <CircleSpinner />
     return(
         <>
              <table className="shadow-2xl font-[Poppins] border-2 border-indigo-200 overflow-hidden rounded-xl mt-2 mb-5 mx-auto">

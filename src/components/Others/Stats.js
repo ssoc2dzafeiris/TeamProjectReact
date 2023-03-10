@@ -1,5 +1,6 @@
 import React ,{useState,useEffect}from 'react';
 import StatsItem from './StatsItem';
+import CircleSpinner from '../Utilities/Loaders/CircleSpinner';
 
 export default function Stats({title}){
     const url = "https://chain-legendary-strawflower.glitch.me/stats";
@@ -13,6 +14,7 @@ export default function Stats({title}){
         });
     },[]);
 
+    if ( stats.length === 0 ) return <CircleSpinner />
     return (
         <>
          <div className="flex flex-col py-2 mt-4 mx-auto">
@@ -24,7 +26,6 @@ export default function Stats({title}){
             (
                 <StatsItem key={id} title={title} amount={amount}/>
             ))}
-        
             </div>
         </>
        

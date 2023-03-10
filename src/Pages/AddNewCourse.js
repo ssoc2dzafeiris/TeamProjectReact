@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
-
+// import { useNavigate } from "react-router-dom";  
 const AddNewCourse = () => {
-    <div className="row">
-        <Link to='/' className='text-black-50 p-2 col-md-5'>Go Back</Link>
-    </div>
-
+    
+    // const navigateTo = useNavigate();
     const [title, setTitle] = useState('');
     const [duration, setDuration] = useState('');
     const [imagePath, setImagePath] = useState('');
@@ -44,6 +41,7 @@ const AddNewCourse = () => {
                     setShowAlert('');
                 }, 2000);
             })
+            // .then(navigateTo('/courses/'))
             .catch(error => console.error(error));
 
     }

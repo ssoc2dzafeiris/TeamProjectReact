@@ -5,12 +5,10 @@ import LoadingSpinner from '../components/Utilities/Loaders/LoadingSpinner.js';
 import Buttons from "../components/Utilities/Buttons/buttons";
 
 export default function CourseDetails(){
-    
     const API = 'https://chain-legendary-strawflower.glitch.me/courses/';
     const params = useParams();
     const [course,setCourse]= useState(null);
     // const navigate = useNavigate();
-
     const fetchDetails = () =>{
         setTimeout(function() 
         {

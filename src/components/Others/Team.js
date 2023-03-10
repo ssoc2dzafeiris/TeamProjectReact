@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import TeamUserCard from '../Utilities/Cards/TeamUserCard';
+import CircleSpinner from '../Utilities/Loaders/CircleSpinner'
 
 export default function Team(){
     const UserApi = 'https://chain-legendary-strawflower.glitch.me/teamusers';
@@ -16,7 +17,7 @@ export default function Team(){
         getTeamUser()
     },[]);
 
-    if (!teamusers) return <div>No one team user </div>
+    if (!teamusers) return <CircleSpinner />
     return (
         <>
         <section className="bg-white flex flex-col rounded-md mt-4 mb-4">
