@@ -19,10 +19,13 @@
     "tailwindcss": "^3.2.6"
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "json-server": "^0.17.1"
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build", 
+		"deploy": "gh-pages -d build",
     "api": "json-server --watch db.json --port 3001",
     "build": "react-scripts build",
     "test": "react-scripts test",
