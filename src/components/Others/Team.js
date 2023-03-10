@@ -6,7 +6,12 @@ export default function Team(){
     const UserApi = 'https://chain-legendary-strawflower.glitch.me/teamusers';
     const [teamusers,setTeamusers] = useState(null);
     const getTeamUser = () =>{
-        fetch(UserApi)
+        fetch(UserApi,{
+            method: "GET",
+            headers: {
+              "access-control-allow-origin" : "*",
+              "Content-type": "application/json; charset=UTF-8"
+            }})
         .then((res)=> res.json())
         .then((data) =>{
             setTeamusers(data);
@@ -24,7 +29,7 @@ export default function Team(){
         <div className="px-6 mx-auto ">
         <h1 className="text-3xl font-extrabold text-indigo-600 lg:text-3xl">| Our Team</h1>
         <div className="grid grid-cols-1 gap-5 mt-1 xl:mt-10 md:grid-cols-2 xl:grid-cols-4 ">
-            {teamusers.length && 
+            {(teamusers.length > 0) && 
             teamusers.map((user) =>{ 
                 return(<TeamUserCard key={user.lname} fname={user.fname} lname={user.lname} title={user.title} linkedin={user.linkedin} email={user.email} github={user.github} bio={user.bio}/>)
             })}

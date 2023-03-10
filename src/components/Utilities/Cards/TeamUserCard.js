@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCodeCompare,faAt,faLink} from '@fortawesome/free-solid-svg-icons'
 export default function TeamUserCard({title,fname,lname,bio,github,linkedin,email}){
 
-
     return(
         <>
          <div className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-indigo-600 dark:border-slate-700 dark:hover:border-transparent">

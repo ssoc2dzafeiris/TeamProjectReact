@@ -7,7 +7,12 @@ export default function CourseTable({id,title,online,start_date,end_date,imagePa
     const [courses,setCourses]= useState([]);
 
     const fetchLastCourses = () =>{
-        fetch(url)
+        fetch(url,{
+            method: "GET",
+            headers: {
+              "access-control-allow-origin" : "*",
+              "Content-type": "application/json; charset=UTF-8"
+            }})
         .then((response)=> response.json())
         .then((data)=> {
             const lastCourses = data.slice(-5);
