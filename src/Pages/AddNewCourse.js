@@ -31,7 +31,7 @@ const AddNewCourse = () => {
 
 
 
-        fetch('http://localhost:3001/courses', {
+        fetch('https://chain-legendary-strawflower.glitch.me/courses', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
@@ -100,7 +100,7 @@ const AddNewCourse = () => {
                     </label>
                     <textarea
                         className="block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3"
-                        name="description" type="text" onChange={(e) => setDescription((e.target.value))} required maxLength="500">
+                        name="description" type="text" onChange={(e) => setDescription((e.target.value))} required >
                     </textarea>
 
                     <p className="font-bold font-weight: 700">Dates</p>
