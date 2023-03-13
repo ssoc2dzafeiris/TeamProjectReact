@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
-// import { useNavigate } from "react-router-dom";  
+import React, { useState,useRef,} from 'react';
+import { Link,useNavigate } from 'react-router-dom';
+
+
+
 const AddNewCourse = () => {
-    
-    // const navigateTo = useNavigate();
+
+    const formRef = useRef(null);
+    const navigate = useNavigate();
+
+    <div className="row">
+        <Link to='/' className='text-black-50 p-2 col-md-5'>Go Back</Link>
+    </div>
+
     const [title, setTitle] = useState('');
     const [duration, setDuration] = useState('');
     const [imagePath, setImagePath] = useState('');
@@ -40,15 +49,16 @@ const AddNewCourse = () => {
                 setTimeout(() => {
                     setShowAlert('');
                 }, 2000);
+                formRef.current.reset();
+                navigate('/courses');
             })
-            // .then(navigateTo('/courses/'))
             .catch(error => console.error(error));
 
     }
     return (
         <>
             <div className="w-full mt-2 mx-auto flex justify-center items-center h-screens">
-                <form onSubmit={handleSubmit} className=" max-h-90vh w-5/6 bg-white p-8 rounded-lg shadow-md overflow-y-auto ">
+                <form ref={formRef} onSubmit={handleSubmit} className=" max-h-90vh w-5/6 bg-white p-8 rounded-lg shadow-md overflow-y-auto ">
                     {showAlert && (
                         <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
                             <span class="font-medium">Το μάθημα καταχωρήθηκε επιτυχώς!</span>
