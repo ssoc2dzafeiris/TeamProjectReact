@@ -18,7 +18,7 @@ export default function Dashboard() {
             <div className="flex flex-col mt-3 mx-auto px-2">
                 <h3 className="text-3xl font-semibold text-indigo-100 py-1 px-5 mx-auto border-b-2 border-gray-100">Last 5 courses</h3>
                 <div className="mb-10 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
-                    <div className="flex flex-col items-center justify-center ">
+                    <div className="flex flex-col items-center justify-center">
                         <CourseTable />
                     </div>
                 </div>

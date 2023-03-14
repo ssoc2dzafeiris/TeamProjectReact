@@ -5,6 +5,7 @@ import CircleSpinner from './Utilities/Loaders/CircleSpinner';
 export default function CourseTable({id,title,online,start_date,end_date,imagePath,duration}){
     const url = 'https://chain-legendary-strawflower.glitch.me/courses';
     const [courses,setCourses]= useState([]);
+    const [allCourses,setAllCourses]=useState(null);
 
     const fetchLastCourses = () =>{
         fetch(url,{
@@ -15,6 +16,7 @@ export default function CourseTable({id,title,online,start_date,end_date,imagePa
             }})
         .then((response)=> response.json())
         .then((data)=> {
+            setAllCourses(data.length);
             const lastCourses = data.slice(-5);
             setCourses(lastCourses);});
     }
@@ -51,13 +53,11 @@ export default function CourseTable({id,title,online,start_date,end_date,imagePa
                             </thead>
                             <tbody className="text-indigo-800 text-center">
                                 {courses.length > 0 && courses.map((item) =>{
-                                     return (<CourseItem key={item.id} id={item.id} title={item.title} duration={item.duration} start_date ={item.dates.start_date} end_date={item.dates.end_date} online={item.online} />)
-                                }
-        
-                                )}                                                           
+                                     return (<CourseItem key={item.id} id={item.id} title={item.title} duration={item.duration} start_date={item.dates.start_date} end_date={item.dates.end_date} online={item.online} />)
+                                })}                                                           
                             </tbody>
+                            <tfoot className="flex flex-col p-2 mx-auto"><p className='text-indigo-200 font-semibold text-xl capitalize underline'>Total number of courses: <span className='text-white font-bold text-xl'>{allCourses}</span></p></tfoot>
                         </table>
         </>
-
     )
 }
