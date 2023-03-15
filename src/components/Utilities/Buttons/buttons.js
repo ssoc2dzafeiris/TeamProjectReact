@@ -1,19 +1,11 @@
-
 import ButEdit from "./buttonedit";
 import ButDel from "./buttondelete";
-
-
-
 export default function Buttons(props){
   
     return (
-        <div className="grid grid-cols-5 gap-4 text-lg m-8">
-            <div className="col-span-3"></div>
-            <div><ButEdit  data={props.data} idNumber={props.idNumber}/></div>
-            <div><ButDel idNumber={props.idNumber} /></div>
-            <>
-       </>
-        
+        <div className="flex flex-wrap items-center justify-start mt-5 mb-5">
+            <div className="flex flex-col"><ButEdit data={props.data} idNumber={props.idNumber}/></div>
+            <div className="flex flex-col"><ButDel idNumber={props.idNumber} /></div>
         </div>
     );
 }
