@@ -22,7 +22,7 @@ const Navbar = () => {
             <ul className={`md:flex md:items-center md:pb-0 pb-0 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-12' : 'top-[-300px]'} md:opacity-100`}>
                 {Links.map((link) => (
                 <li key={link.name} className='md:ml-8 text-xl md:my-0 my-7'>
-                  <Link key={link.name} to={link.link} className='text-gray-800 hover:text-gray-400 duration-500'>{link.name}</Link>
+                  <Link key={link.name} to={link.link} state={{from:'Add'}}  className='text-gray-800 hover:text-gray-400 duration-500'>{link.name}</Link>
                 </li>
               ))}
             </ul>
