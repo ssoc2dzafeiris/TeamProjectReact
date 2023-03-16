@@ -7,13 +7,15 @@ export default function CourseDetails(){
     const params = useParams();
     const [course,setCourse]= useState(null);
     const fetchDetails = () =>{
-        setTimeout(function() 
-        {
-            fetch(`${API}${params.id}`)
-            .then((res)=> res.json())
-            .then((data) => setCourse(data))
-            .catch((error) => {console.log("Error in fetching:",error)});
-        }, 1000);
+       
+        fetch(`${API}${params.id}`)
+        .then((res)=> res.json())
+        .then((data) => setCourse(data))
+        
+        .catch((error) => {
+            console.log("Error in fetching:",error)
+          });
+       
     }
     useEffect(()=>{
         fetchDetails()
@@ -60,7 +62,7 @@ export default function CourseDetails(){
                                 <div><span className="text-normal font-normal inline-block py-1 px-2 rounded-full text-slate-100 bg-indigo-600 mr-3"><i className="fa-solid fa-gift"></i></span></div>
                         <div><h4 className="text-slate-600 hover:text-indigo-500 font-normal hover:underline text-normal">Early-bird Price:<span>{course.price.early_bird}</span></h4></div></div></li>
                         </ul>
-                        <Buttons fetchDetails={fetchDetails()} data={course} idNumber={course.id} />
+                        <Buttons data={course} idNumber={course.id} />
                         </div>
                         </div>
                         </div>
